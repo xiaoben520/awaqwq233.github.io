@@ -1,18 +1,18 @@
-# xiaoben520.github.io
+# awaqwq23.github.io
 
 <p align="center">
   <img src="https://avatars.githubusercontent.com/u/26668842?v=4" width="120" style="border-radius: 50%;"/>
 </p>
 
 <p align="center">
-  <strong>xiaoben520 的个人网站</strong><br>
+  <strong>awaqwq233 的个人网站</strong><br>
   武汉大学 · 代码 · 玩具 · 生活
 </p>
 
 <p align="center">
-  <a href="https://xiaoben520.github.io">🌐 访问网站</a>
+  <a href="https://awaqwq23.github.io">🌐 访问网站</a>
   &nbsp;|&nbsp;
-  <a href="https://github.com/xiaoben520">🐙 GitHub</a>
+  <a href="https://github.com/awaqwq23">🐙 GitHub</a>
 </p>
 
 ---
@@ -85,4 +85,4 @@ npm run preview
 
 ## 许可证
 
-MIT © 2025-2026 awapwq233
+MIT © 2025-2026 awaqwq233

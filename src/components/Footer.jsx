@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="footer-inner">
         <span>
           © 2025-2026{' '}
-          <a href="https://github.com/xiaoben520" target="_blank" rel="noopener">awaqwq233</a>
+          <a href="https://github.com/awaqwq23" target="_blank" rel="noopener">awaqwq233</a>
           . Made with 💙
         </span>
         <span>
