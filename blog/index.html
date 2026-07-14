@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="博客 — awapwq233 的技术笔记与生活记录">
+  <title>博客 · awaqwq233</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💙</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <button id="mobile-toggle" class="mobile-toggle" aria-label="菜单">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+    <aside id="sidebar" class="sidebar">
+      <img src="https://avatars.githubusercontent.com/u/26668842?v=4" alt="avatar" class="sidebar-avatar">
+      <div class="sidebar-name">awaqwq233</div>
+      <div class="sidebar-tagline">My Guiding Star.</div>
+      <nav class="sidebar-nav">
+        <a href="/"><i class="fas fa-home"></i> 首页</a>
+        <a href="/blog/" class="active"><i class="fas fa-pen-fancy"></i> 博客</a>
+        <a href="/toys/"><i class="fas fa-gamepad"></i> 小玩具</a>
+        <a href="/about/"><i class="fas fa-info-circle"></i> 关于</a>
+      </nav>
+      <div class="sidebar-social">
+        <a href="https://github.com/xiaoben520" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="javascript:location.href='mailto:'+['awapwq233','outlook.com'].join('@')" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="/blog/" aria-label="Blog"><i class="fas fa-rss"></i></a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page">
+        <div class="section-header">
+          <h1><i class="fas fa-pen-fancy" style="color: var(--primary); margin-right: 0.5rem;"></i> 博客</h1>
+          <p>技术笔记 · 生活记录 · 项目心得</p>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Controls -->
+        <div class="blog-controls">
+          <div class="blog-filter-group" id="category-filters">
+            <button class="filter-btn active" data-category="all">全部</button>
+          </div>
+          <select class="sort-select" id="sort-select">
+            <option value="newest">最新优先</option>
+            <option value="oldest">最早优先</option>
+          </select>
+          <span class="post-count" id="post-count"></span>
+        </div>
+
+        <!-- Blog List -->
+        <div class="blog-list" id="blog-list">
+          <div style="text-align: center; padding: 3rem; color: var(--slate-400);">
+            <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+            加载中...
+          </div>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <span>© 2025-2026 <a href="https://github.com/xiaoben520">awaqwq233</a>. Made with 💙</span>
+        <span>Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const blogList = document.getElementById('blog-list');
+      const filterGroup = document.getElementById('category-filters');
+      const sortSelect = document.getElementById('sort-select');
+      const postCount = document.getElementById('post-count');
+
+      let posts = [];
+      let currentCategory = 'all';
+      let currentSort = 'newest';
+
+      // Load posts JSON
+      try {
+        const res = await fetch('/blog/posts/index.json');
+        posts = await res.json();
+      } catch (e) {
+        blogList.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--slate-400)"><i class="fas fa-inbox" style="font-size:2rem;display:block;margin-bottom:1rem"></i>暂无文章，敬请期待～</div>';
+        postCount.textContent = '共 0 篇文章';
+        return;
+      }
+
+      // Build category filters
+      const categories = [...new Set(posts.map(p => p.category))];
+      categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.dataset.category = cat;
+        const labels = {
+          'tech': '💻 技术',
+          'life': '🌸 生活',
+          'dev': '⚙️ 开发',
+          'toy': '🎮 玩具'
+        };
+        btn.textContent = labels[cat] || cat;
+        filterGroup.appendChild(btn);
+
+        btn.addEventListener('click', () => {
+          filterGroup.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = cat;
+          renderPosts();
+        });
+      });
+
+      // Sort change
+      sortSelect.addEventListener('change', () => {
+        currentSort = sortSelect.value;
+        renderPosts();
+      });
+
+      function renderPosts() {
+        let filtered = currentCategory === 'all'
+          ? [...posts]
+          : posts.filter(p => p.category === currentCategory);
+
+        // Sort
+        filtered.sort((a, b) => {
+          const da = new Date(a.date);
+          const db = new Date(b.date);
+          return currentSort === 'newest' ? db - da : da - db;
+        });
+
+        postCount.textContent = `共 ${filtered.length} 篇文章`;
+
+        if (filtered.length === 0) {
+          blogList.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--slate-400)"><i class="fas fa-inbox" style="font-size:2rem;display:block;margin-bottom:1rem"></i>该分类暂无文章</div>';
+          return;
+        }
+
+        blogList.innerHTML = filtered.map(post => `
+          <article class="blog-post-card">
+            <div class="post-meta">
+              <span class="post-date"><i class="far fa-calendar-alt"></i> ${post.date}</span>
+              <span class="post-category ${post.category}">${post.categoryLabel || post.category}</span>
+            </div>
+            <h3><a href="${post.url}">${post.title}</a></h3>
+            <p>${post.excerpt}</p>
+            ${post.tags ? `<div class="post-tags">${post.tags.map(t => `<span class="post-tag">#${t}</span>`).join('')}</div>` : ''}
+          </article>
+        `).join('');
+      }
+
+      renderPosts();
+    });
+  </script>
+</body>
+</html>

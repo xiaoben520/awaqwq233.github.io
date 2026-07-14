@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World — 我的第一个博客 · awaqwq233</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💙</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .post-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .post-content h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .post-content .post-meta {
+      font-size: 0.9rem;
+      color: var(--slate-400);
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--slate-200);
+    }
+    .post-body {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: var(--slate-700);
+    }
+    .post-body p {
+      margin-bottom: 1.25rem;
+    }
+    .post-body h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin: 2rem 0 1rem;
+    }
+    .post-body blockquote {
+      border-left: 4px solid var(--primary);
+      padding: 0.75rem 1.25rem;
+      margin: 1.5rem 0;
+      background: var(--primary-bg);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color: var(--slate-600);
+    }
+    .post-body code {
+      background: var(--slate-100);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: var(--font-mono);
+    }
+    .post-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--slate-200);
+    }
+    .post-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <button id="mobile-toggle" class="mobile-toggle" aria-label="菜单">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+    <aside id="sidebar" class="sidebar">
+      <img src="https://avatars.githubusercontent.com/u/26668842?v=4" alt="avatar" class="sidebar-avatar">
+      <div class="sidebar-name">awaqwq233</div>
+      <div class="sidebar-tagline">My Guiding Star.</div>
+      <nav class="sidebar-nav">
+        <a href="/"><i class="fas fa-home"></i> 首页</a>
+        <a href="/blog/"><i class="fas fa-pen-fancy"></i> 博客</a>
+        <a href="/toys/"><i class="fas fa-gamepad"></i> 小玩具</a>
+        <a href="/about/"><i class="fas fa-info-circle"></i> 关于</a>
+      </nav>
+      <div class="sidebar-social">
+        <a href="https://github.com/xiaoben520" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        <a href="javascript:location.href='mailto:'+['awapwq233','outlook.com'].join('@')"><i class="fas fa-envelope"></i></a>
+        <a href="/blog/"><i class="fas fa-rss"></i></a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page">
+        <article class="post-content">
+          <h1>Hello World — 我的第一个博客</h1>
+          <div class="post-meta">
+            <span><i class="far fa-calendar-alt"></i> 2025-10-13</span>
+            &nbsp;·&nbsp;
+            <span class="post-category life">🌸 生活</span>
+            &nbsp;·&nbsp;
+            <span><i class="far fa-clock"></i> 约 3 分钟</span>
+          </div>
+
+          <div class="post-body">
+            <p>你好哇！👋</p>
+
+            <p>这是我的第一篇文章。终于把个人网站搭建好了，以后这里就是我在互联网上的一个小小根据地啦！</p>
+
+            <blockquote>
+              Hope you can enjoy it! :D
+            </blockquote>
+
+            <h2>为什么搭建这个网站？</h2>
+
+            <p>一直以来都想拥有一个属于自己的个人空间。之前也在各种平台上写过一点东西，但总觉得那些地方少了点什么——可能是少了属于自己的一份"掌控感"吧。</p>
+
+            <p>于是趁着有空，用 <strong>GitHub Pages</strong> 搭了这个静态网站。不需要服务器、不需要数据库，简简单单的 HTML 和 CSS，反而有种返璞归真的味道。</p>
+
+            <h2>这里会有什么？</h2>
+
+            <p>我计划在这里写这些东西：</p>
+
+            <ul style="margin-left:1.5rem; margin-bottom:1.25rem;">
+              <li style="list-style:disc; margin-bottom:0.4rem;"><strong>技术笔记</strong> — 学习编程过程中的总结和思考</li>
+              <li style="list-style:disc; margin-bottom:0.4rem;"><strong>项目心得</strong> — 做小玩具时踩的坑和收获</li>
+              <li style="list-style:disc; margin-bottom:0.4rem;"><strong>生活记录</strong> — 一些随想和日常</li>
+            </ul>
+
+            <h2>关于我</h2>
+
+            <p>我是 <strong>awaqwq233</strong>，也可以叫我 <strong>Shirakawa</strong>。目前是武汉大学的一名学生，学的是软件工程。</p>
+
+            <p>喜欢写代码、做小玩具、听音乐、还有发呆。最近在学 C# 和 Web 开发，希望能做出更多有趣的东西。</p>
+
+            <p>那么，就这样吧。未来的日子，请多关照！</p>
+
+            <p style="color: var(--slate-400);">—— awapwq233</p>
+          </div>
+
+          <div class="post-nav">
+            <span></span>
+            <a href="/blog/">← 返回博客</a>
+          </div>
+        </article>
+      </div>
+
+      <footer class="site-footer">
+        <span>© 2025-2026 <a href="https://github.com/xiaoben520">awaqwq233</a>. Made with 💙</span>
+        <span>Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></span>
+      </footer>
+    </main>
+  </div>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

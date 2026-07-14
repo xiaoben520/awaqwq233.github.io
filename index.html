@@ -1,39 +1,162 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>  
-      body {
-        margin: 0;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="awaqwq233 的个人网站 — 武汉大学 | 代码、玩具与生活">
+  <meta name="theme-color" content="#3B82F6">
+  <meta property="og:title" content="awaqwq233">
+  <meta property="og:description" content="个人网站 — 代码、玩具与生活">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/26668842?v=4">
+  <title>awaqwq233 · 主页</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💙</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <!-- Mobile Toggle -->
+  <button id="mobile-toggle" class="mobile-toggle" aria-label="菜单">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+
+    <!-- ====== Sidebar ====== -->
+    <aside id="sidebar" class="sidebar">
+      <img src="https://avatars.githubusercontent.com/u/26668842?v=4" alt="avatar" class="sidebar-avatar">
+      <div class="sidebar-name">awaqwq233</div>
+      <div class="sidebar-tagline">My Guiding Star.</div>
+
+      <nav class="sidebar-nav">
+        <a href="/" class="active"><i class="fas fa-home"></i> 首页</a>
+        <a href="/blog/"><i class="fas fa-pen-fancy"></i> 博客</a>
+        <a href="/toys/"><i class="fas fa-gamepad"></i> 小玩具</a>
+        <a href="/about/"><i class="fas fa-info-circle"></i> 关于</a>
+      </nav>
+
+      <div class="sidebar-social">
+        <a href="https://github.com/xiaoben520" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="javascript:location.href='mailto:'+['awapwq233','outlook.com'].join('@')" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="/blog/" aria-label="Blog"><i class="fas fa-rss"></i></a>
+      </div>
+    </aside>
+
+    <!-- ====== Main Content ====== -->
+    <main class="main-content">
+
+      <div class="page">
+
+        <!-- Hero -->
+        <section class="hero">
+          <div class="hero-greeting animate-on-scroll">
+            <span>👋</span> 你好哇，欢迎来到
+          </div>
+          <h1 class="hero-title animate-on-scroll animate-in-d1">
+            <span class="highlight">awaqwq233</span> 的小站
+          </h1>
+          <p class="hero-subtitle animate-on-scroll animate-in-d2">
+            这里是 <strong>awaqwq233</strong> 的个人空间，也可以叫我 <strong>Shirakawa</strong>。
+            目前是武汉大学的学生，喜欢写代码、做小玩具、以及记录生活。
+          </p>
+          <div class="hero-actions animate-on-scroll animate-in-d3">
+            <a href="/blog/" class="btn btn-primary">
+              <i class="fas fa-book-open"></i> 浏览博客
+            </a>
+            <a href="/toys/" class="btn btn-outline">
+              <i class="fas fa-rocket"></i> 逛逛玩具
+            </a>
+          </div>
+        </section>
+
+        <!-- Featured Sections -->
+        <section style="margin: 2rem 0 4rem;">
+          <div class="section-header animate-on-scroll">
+            <h2>探索本站</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="features-grid">
+
+            <a href="/blog/" class="feature-card animate-on-scroll animate-in-d1" style="display: block;">
+              <div class="icon"><i class="fas fa-pen-fancy"></i></div>
+              <h3>📝 博客</h3>
+              <p>记录技术笔记、生活随想和项目心得。支持按分类和日期浏览。</p>
+              <span class="card-link">前往博客 <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="/toys/" class="feature-card animate-on-scroll animate-in-d2" style="display: block;">
+              <div class="icon"><i class="fas fa-gamepad"></i></div>
+              <h3>🎮 小玩具</h3>
+              <p>各种有趣的小项目和在线工具，部署在不同的服务器上，随时来玩。</p>
+              <span class="card-link">看看玩具 <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="/about/" class="feature-card animate-on-scroll animate-in-d3" style="display: block;">
+              <div class="icon"><i class="fas fa-user"></i></div>
+              <h3>👤 关于我</h3>
+              <p>了解关于 awapwq233 的更多信息，包括经历、兴趣和联系方式。</p>
+              <span class="card-link">了解更多 <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- Latest Posts Preview -->
+        <section style="margin-bottom: 3rem;">
+          <div class="section-header animate-on-scroll">
+            <h2>📌 最新文章</h2>
+            <div class="section-line"></div>
+          </div>
+
+          <div class="blog-list" id="recent-posts">
+            <!-- Posts loaded by JS -->
+          </div>
+
+          <div style="text-align: center; margin-top: 1.5rem;">
+            <a href="/blog/" class="btn btn-outline">查看全部文章 <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <span>© 2025-2026 <a href="https://github.com/xiaoben520">awaqwq233</a>. Made with 💙</span>
+        <span>Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></span>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    // Load recent posts for homepage
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const res = await fetch('/blog/posts/index.json');
+        const posts = await res.json();
+        const container = document.getElementById('recent-posts');
+        const recent = posts.slice(0, 3);
+        container.innerHTML = recent.map(post => `
+          <article class="blog-post-card">
+            <div class="post-meta">
+              <span class="post-date"><i class="far fa-calendar-alt"></i> ${post.date}</span>
+              <span class="post-category ${post.category}">${post.categoryLabel || post.category}</span>
+            </div>
+            <h3><a href="${post.url}">${post.title}</a></h3>
+            <p>${post.excerpt}</p>
+            ${post.tags ? `<div class="post-tags">${post.tags.map(t => `<span class="post-tag">#${t}</span>`).join('')}</div>` : ''}
+          </article>
+        `).join('');
+      } catch (e) {
+        // Silently fail if no posts yet
       }
-    </style>
-  </head>
-  <body>
-    <div style="
-    background-color:#f1f1f1;
-    text-align:center;
-    padding:40px;
-    ">
-    <img src='https://kangwenchang.com/logo.png' alt="awa" width="100px" height="100px">
-    </div>
-      <div style="
-      max-width:700px;
-      color:red;
-      ">
-<p>awa</p>
-<p>awa</p>
-<p>awa</p>
-<p>awa</p>
-<p>awa</p>
-</div>
-<div style="
-    background-color:#f1f1f1;
-    text-align:center;
-    padding:40px;
-    font-size:12px;">
-<p>awa</p>
-<a herf="https://kangwenchang.com/">友情链接</a>
-    </div>
-  </body>
+    });
+  </script>
+</body>
 </html>

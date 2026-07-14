@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows 开发环境配置指南 · awaqwq233</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💙</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .post-content { max-width: 720px; margin: 0 auto; }
+    .post-content h1 { font-size: 2rem; font-weight: 800; color: var(--slate-900); margin-bottom: 0.5rem; line-height: 1.3; }
+    .post-content .post-meta { font-size: 0.9rem; color: var(--slate-400); margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--slate-200); }
+    .post-body { font-size: 1rem; line-height: 1.9; color: var(--slate-700); }
+    .post-body p { margin-bottom: 1.25rem; }
+    .post-body h2 { font-size: 1.4rem; font-weight: 700; color: var(--slate-900); margin: 2rem 0 1rem; }
+    .post-body pre { background: var(--slate-900); color: #e2e8f0; padding: 1rem 1.25rem; border-radius: var(--radius-sm); overflow-x: auto; font-family: var(--font-mono); font-size: 0.9rem; margin: 1.25rem 0; }
+    .post-body code { background: var(--slate-100); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; font-family: var(--font-mono); }
+    .post-body pre code { background: none; padding: 0; }
+    .post-nav { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--slate-200); }
+  </style>
+</head>
+<body>
+  <button id="mobile-toggle" class="mobile-toggle" aria-label="菜单"><i class="fas fa-bars"></i></button>
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <div class="app-wrapper">
+    <aside id="sidebar" class="sidebar">
+      <img src="https://avatars.githubusercontent.com/u/26668842?v=4" alt="avatar" class="sidebar-avatar">
+      <div class="sidebar-name">awaqwq233</div>
+      <div class="sidebar-tagline">My Guiding Star.</div>
+      <nav class="sidebar-nav">
+        <a href="/"><i class="fas fa-home"></i> 首页</a>
+        <a href="/blog/"><i class="fas fa-pen-fancy"></i> 博客</a>
+        <a href="/toys/"><i class="fas fa-gamepad"></i> 小玩具</a>
+        <a href="/about/"><i class="fas fa-info-circle"></i> 关于</a>
+      </nav>
+      <div class="sidebar-social">
+        <a href="https://github.com/xiaoben520" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        <a href="javascript:location.href='mailto:'+['awapwq233','outlook.com'].join('@')"><i class="fas fa-envelope"></i></a>
+        <a href="/blog/"><i class="fas fa-rss"></i></a>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="page">
+        <article class="post-content">
+          <h1>Windows 开发环境配置指南</h1>
+          <div class="post-meta">
+            <span><i class="far fa-calendar-alt"></i> 2025-12-20</span> &nbsp;·&nbsp; <span class="post-category tech">💻 技术</span> &nbsp;·&nbsp; <span><i class="far fa-clock"></i> 约 6 分钟</span>
+          </div>
+          <div class="post-body">
+            <p>最近重装了系统，记录一下在 Windows 下配置开发环境的完整流程，方便以后参考。</p>
+
+            <h2>WSL (Windows Subsystem for Linux)</h2>
+            <p>WSL 是在 Windows 上使用 Linux 的最佳方式。</p>
+            <pre><code>wsl --install -d Ubuntu</code></pre>
+
+            <h2>Git</h2>
+            <pre><code>winget install Git.Git</code></pre>
+            <p>安装后配置用户名和邮箱：</p>
+            <pre><code>git config --global user.name "Your Name"
+git config --global user.email "your@email.com"</code></pre>
+
+            <h2>VS Code</h2>
+            <pre><code>winget install Microsoft.VisualStudioCode</code></pre>
+            <p>推荐插件：GitLens, Prettier, ESLint, C# Dev Kit, GitHub Copilot</p>
+
+            <h2>Node.js</h2>
+            <pre><code>winget install OpenJS.NodeJS.LTS</code></pre>
+
+            <h2>.NET SDK</h2>
+            <pre><code>winget install Microsoft.DotNet.SDK.8</code></pre>
+
+            <p>以上就是我常用的开发环境配置，希望对你有帮助！</p>
+          </div>
+          <div class="post-nav">
+            <a href="/blog/posts/hello-world.html">← 上一篇</a>
+            <a href="/blog/">返回博客</a>
+          </div>
+        </article>
+      </div>
+      <footer class="site-footer">
+        <span>© 2025-2026 <a href="https://github.com/xiaoben520">awaqwq233</a>. Made with 💙</span>
+        <span>Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></span>
+      </footer>
+    </main>
+  </div>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
