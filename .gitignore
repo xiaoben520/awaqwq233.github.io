@@ -1,10 +1,11 @@
-# System
+node_modules
+dist
+.vite
+*.local
 .DS_Store
 Thumbs.db
 *.swp
 *.swo
-
-# IDE
 .idea/
 .vscode/
 *.sublime-*
