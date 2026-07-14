@@ -1,8 +1,6 @@
-import { NavLink } from 'react-router-dom'
-
 export default function PostCard({ post }) {
   return (
-    <article className="blog-post-card">
+    <a href={post.url} className="blog-post-card blog-post-link">
       <div className="post-meta">
         <span className="post-date">
           <i className="far fa-calendar-alt" /> {post.date}
@@ -11,9 +9,7 @@ export default function PostCard({ post }) {
           {post.categoryLabel || post.category}
         </span>
       </div>
-      <h3>
-        <a href={post.url}>{post.title}</a>
-      </h3>
+      <h3>{post.title}</h3>
       <p>{post.excerpt}</p>
       {post.tags && (
         <div className="post-tags">
@@ -22,6 +18,6 @@ export default function PostCard({ post }) {
           ))}
         </div>
       )}
-    </article>
+    </a>
   )
 }

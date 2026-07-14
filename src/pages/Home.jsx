@@ -83,7 +83,7 @@ export default function Home() {
             <span className="gradient-text">awaqwq233</span> 的小站
           </h1>
           <p className="hero-subtitle">
-            这里是 <strong>awaqwq233</strong> 的个人空间，也可以叫我 <strong>Shirakawa</strong>。
+            这里是 <strong>awaqwq233</strong> 的个人空间。
             目前是武汉大学的学生，喜欢写代码、做小玩具、以及记录生活。
           </p>
           <div className="hero-actions">
@@ -137,7 +137,7 @@ export default function Home() {
           {posts.length > 0 ? (
             posts.map((post, i) => (
               <AnimatedSection key={post.url} delay={i * 0.08}>
-                <article className="blog-post-card">
+                <a href={post.url} className="blog-post-card blog-post-link">
                   <div className="post-meta">
                     <span className="post-date">
                       <i className="far fa-calendar-alt" /> {post.date}
@@ -146,14 +146,14 @@ export default function Home() {
                       {post.categoryLabel || post.category}
                     </span>
                   </div>
-                  <h3><a href={post.url}>{post.title}</a></h3>
+                  <h3>{post.title}</h3>
                   <p>{post.excerpt}</p>
                   {post.tags && (
                     <div className="post-tags">
                       {post.tags.map(t => <span key={t} className="post-tag">#{t}</span>)}
                     </div>
                   )}
-                </article>
+                </a>
               </AnimatedSection>
             ))
           ) : (

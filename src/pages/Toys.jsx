@@ -18,7 +18,7 @@ const toys = [
   {
     name: '💓 Heartbeat',
     desc: '一个有趣的心跳互动应用，可以用来表达心意或者测试反应速度。',
-    url: 'http://heartbeat.shenxianovo.com',
+    url: 'https://awaqwq233.com/heartbeat/',
     bg: 'linear-gradient(135deg, #667eea, #764ba2)',
     icon: 'fa-heart',
   },

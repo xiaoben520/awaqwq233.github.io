@@ -44,7 +44,6 @@ export default function About() {
               &nbsp;·&nbsp; <i className="fas fa-code" /> C# / Python / Web
             </p>
             <p>你好哇，这里是 <strong>awaqwq233</strong>，最常见的缩写是 <strong>awa</strong>。</p>
-            <p>你也可以叫我 <strong>Shirakawa</strong>，<strong>Pure Memory</strong>，<strong>Cynthia</strong>，以及别的什么 w</p>
             <div className="about-links">
               <a href="https://github.com/awaqwq23" target="_blank" rel="noopener">
                 <i className="fab fa-github" /> GitHub

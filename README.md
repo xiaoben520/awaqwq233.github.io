@@ -67,11 +67,88 @@ npm run build
 npm run preview
 ```
 
-## 添加博客文章
+## 📝 写博客 & 上传
 
-1. 在 `public/blog/posts/` 下创建 `.html` 文件
-2. 在 `public/blog/posts/index.json` 中注册文章信息（标题、日期、分类、摘要）
-3. 推送部署后自动生效
+### 写一篇新博客
+
+1. 在 `public/blog/posts/` 文件夹下创建 `.html` 文件，比如 `my-first-post.html`
+2. 用这个模板写文章：
+
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文章标题 · awaqwq233</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; max-width: 720px; margin: 3rem auto; padding: 0 1.5rem; line-height: 1.9; color: #1e293b; }
+    h1 { font-size: 2rem; font-weight: 800; }
+    .meta { color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #e2e8f0; }
+    p { margin-bottom: 1.25rem; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: 8px; overflow-x: auto; }
+    code { background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+    a { color: #3B82F6; text-decoration: none; }
+    a:hover { color: #2563EB; }
+    .back { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0; }
+  </style>
+</head>
+<body>
+  <h1>你的文章标题</h1>
+  <div class="meta">
+    <span>📅 2026-07-14</span> &nbsp;·&nbsp; <span>💻 技术</span>
+  </div>
+  <p>这里写你的正文内容...</p>
+  <div class="back">
+    <a href="/#/blog">← 返回博客</a>
+  </div>
+</body>
+</html>
+```
+
+### 注册到博客列表
+
+编辑 `public/blog/posts/index.json`，把你的文章信息加进去：
+
+```json
+[
+  {
+    "title": "你的文章标题",
+    "date": "2026-07-14",
+    "category": "tech",
+    "categoryLabel": "💻 技术",
+    "tags": ["标签1", "标签2"],
+    "excerpt": "文章摘要，会显示在博客列表卡片上",
+    "url": "/blog/posts/my-first-post.html"
+  }
+]
+```
+
+**分类可选：** `tech`(技术) / `life`(生活) / `dev`(开发) / `toy`(玩具)
+
+### 上传部署
+
+```bash
+git add .
+git commit -m "feat: 添加新博客"
+git push
+```
+
+GitHub Actions 会自动构建部署 ~1 分钟后网站更新 ✨
+
+## 📅 修改历程（时间线）
+
+打开 `src/pages/About.jsx`，找到 `timeline` 数组：
+
+```jsx
+const timeline = [
+  { title: '你的事件标题', time: '时间', desc: '事件描述' },
+]
+```
+
+按格式增删条目即可，按时间先后排列。中间的蓝点会自动显示。
 
 ## 配色
 
