@@ -17,7 +17,7 @@ function AS({ children, d = 0 }) {
 const toys = [
   {
     name: '💓 Heartbeat',
-    desc: '一个有趣的心跳互动应用，可以用来表达心意或者测试反应速度。',
+    desc: '一个用来视奸我电脑在干什么的小玩具，copy from quq，github：https://github.com/shenxianovo/Heartbeat',
     url: 'https://awaqwq233.com/heartbeat/',
     bg: 'linear-gradient(135deg, #667eea, #764ba2)',
     icon: 'fa-heart',
