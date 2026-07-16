@@ -654,89 +654,63 @@ ul { list-style: none; }
 }
 .toy-card-body .btn-sm { display: inline-flex; align-items: center; gap: 0.3rem; }
 
-/* ---- Docs Page ---- */
-.docs-list {
+/* ---- Docs / Materials Page ---- */
+.materials-cat-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
+  align-items: center;
 }
-.doc-card {
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+.material-card {
   background: white;
   border: 1px solid #E2E8F0;
   border-radius: var(--radius);
-  padding: 1.5rem;
+  overflow: hidden;
   transition: all 0.3s;
 }
-.doc-card:hover {
-  transform: translateX(4px);
-  box-shadow: var(--shadow);
-  border-color: var(--primary-lightest);
+.material-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
-.doc-card-body h3 {
-  font-size: 1.1rem;
+.material-card-head {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+}
+.material-card-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+.material-card-body h3 {
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
   color: var(--text-primary);
 }
-.doc-card-body p {
-  font-size: 0.9rem;
+.material-card-body p {
+  font-size: 0.85rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.55;
+  margin-bottom: 0.85rem;
 }
-
-.doc-content {
-  background: white;
-  border: 1px solid #E2E8F0;
-  border-radius: var(--radius);
-  padding: 2rem 2.5rem;
-  line-height: 2;
-  font-size: 1rem;
-  color: var(--text-primary);
-}
-.doc-paragraph {
-  margin-bottom: 1rem;
-  text-indent: 2em;
-  line-height: 2;
-}
-.doc-heading {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--primary-dark);
-  margin: 1.5rem 0 1rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid var(--primary-lightest);
-}
-
-.doc-pagination {
-  display: flex;
+.material-card-body .btn-sm {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  padding: 1rem 0;
-}
-.doc-page-info {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  font-weight: 500;
-  min-width: 5rem;
-  text-align: center;
-}
-.doc-pagination .btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-  transform: none !important;
-  box-shadow: none !important;
+  gap: 0.3rem;
 }
 
 @media (max-width: 768px) {
-  .doc-content {
-    padding: 1.25rem 1rem;
-  }
-  .doc-pagination {
-    gap: 0.75rem;
-  }
+  .materials-grid { grid-template-columns: 1fr; }
 }
 
 /* ---- About Page ---- */

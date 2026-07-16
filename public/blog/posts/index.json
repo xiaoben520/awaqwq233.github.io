@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "title": "小小的床和小小的我",
+    "date": "2026-07-16",
+    "category": "life",
+    "categoryLabel": "🌸 生活",
+    "tags": ["随笔", "感悟", "床"],
+    "excerpt": "关于床的感恩与胡思乱想，一篇温馨又发癫的随笔。",
+    "url": "/blog/posts/bed-and-me.html"
+  },
+  {
+    "title": "自传（小学+一半初中）",
+    "date": "2026-07-16",
+    "category": "life",
+    "categoryLabel": "🌸 生活",
+    "tags": ["自传", "回忆", "成长"],
+    "excerpt": "从小学到初中的回忆录，记录成长中的点点滴滴。",
+    "url": "/blog/posts/autobiography-primary-junior-high.html"
+  }
+]
