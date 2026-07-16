@@ -1,9 +1,0 @@
-[
-  {
-    "category": "收藏网站",
-    "icon": "fa-bookmark",
-    "items": [
-      { "name": "暂时还没内容", "desc": "在 docs/materials/ 添加内容", "url": "#", "soon": true }
-    ]
-  }
-]

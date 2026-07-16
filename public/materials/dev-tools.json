@@ -1,0 +1,38 @@
+[
+  {
+    "category": "编程语言",
+    "icon": "fa-code",
+    "items": [
+      { "name": "Python", "desc": "解释型高级编程语言，语法简洁易读，广泛用于 Web、数据分析、AI、爬虫、自动化脚本", "url": "https://www.python.org/downloads/" },
+      { "name": "Java", "desc": "面向对象、强类型、跨平台的编程语言，企业级后端、Android、大数据生态的主力", "url": "https://www.oracle.com/java/technologies/downloads/" },
+      { "name": "JavaScript", "desc": "浏览器原生脚本语言，Node.js 让它也能写后端；现代前端必备", "url": "https://nodejs.org/" },
+      { "name": "Go", "desc": "Google 出品的静态编译型语言，并发模型优秀，适合云原生与高性能服务", "url": "https://go.dev/dl/" },
+      { "name": "Rust", "desc": "系统级编程语言，内存安全零成本抽象，性能与 C/C++ 同级", "url": "https://www.rust-lang.org/" },
+      { "name": "C++", "desc": "贴近硬件的高级语言，游戏引擎、嵌入式、高性能计算首选", "url": "https://visualstudio.microsoft.com/zh-hans/vs/features/cplusplus/" }
+    ]
+  },
+  {
+    "category": "开发工具",
+    "icon": "fa-laptop-code",
+    "items": [
+      { "name": "VS Code", "desc": "微软出品的轻量级代码编辑器，插件生态极其丰富", "url": "https://code.visualstudio.com/" },
+      { "name": "JetBrains Toolbox", "desc": "JetBrains 全家桶（IntelliJ IDEA、PyCharm、WebStorm 等）统一安装管理", "url": "https://www.jetbrains.com/toolbox-app/" },
+      { "name": "Git", "desc": "分布式版本控制工具，程序员必备", "url": "https://git-scm.com/download" },
+      { "name": "Docker Desktop", "desc": "容器化开发与部署，本地一键跑起各种服务", "url": "https://www.docker.com/products/docker-desktop/" },
+      { "name": "Postman", "desc": "API 调试工具，方便测试 REST 接口", "url": "https://www.postman.com/downloads/" },
+      { "name": "Xcode", "desc": "macOS / iOS 开发官方 IDE（仅 macOS）", "url": "https://developer.apple.com/xcode/" },
+      { "name": "Android Studio", "desc": "Google 官方 Android 开发 IDE", "url": "https://developer.android.com/studio" }
+    ]
+  },
+  {
+    "category": "运行环境与数据库",
+    "icon": "fa-server",
+    "items": [
+      { "name": "Node.js LTS", "desc": "JavaScript 运行时，让 JS 跑在浏览器之外", "url": "https://nodejs.org/" },
+      { "name": "MySQL", "desc": "最流行的开源关系型数据库", "url": "https://dev.mysql.com/downloads/" },
+      { "name": "PostgreSQL", "desc": "功能强大的开源关系型数据库，SQL 兼容性极佳", "url": "https://www.postgresql.org/download/" },
+      { "name": "Redis", "desc": "高性能内存数据库，常用于缓存、消息队列、计数器", "url": "https://redis.io/download/" },
+      { "name": "MongoDB", "desc": "面向文档的 NoSQL 数据库，JSON 风格存储", "url": "https://www.mongodb.com/try/download/community" }
+    ]
+  }
+]
