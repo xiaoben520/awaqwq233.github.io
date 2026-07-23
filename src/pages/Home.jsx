@@ -84,7 +84,7 @@ export default function Home() {
           </h1>
           <p className="hero-subtitle">
             这里是 <strong>awaqwq233</strong> 的个人空间。
-            目前是武汉大学的学生，喜欢写代码、做小玩具、以及记录生活。
+            目前是武汉大学的学生，喜欢写代码、做时尚小垃圾喵，目标是全世界幸福！。
           </p>
           <div className="hero-actions">
             <Link to="/blog" className="btn btn-primary">

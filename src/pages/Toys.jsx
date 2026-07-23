@@ -17,7 +17,7 @@ function AS({ children, d = 0 }) {
 const toys = [
   {
     name: '💓 Heartbeat',
-    desc: '一个用来视奸我电脑在干什么的小玩具，copy from quq，github：https://github.com/shenxianovo/Heartbeat',
+    desc: '一个用来视奸我电脑在干什么的小玩具，copy from quq，her github：https://github.com/shenxianovo/Heartbeat',
     url: 'https://awaqwq233.com/heartbeat/',
     bg: 'linear-gradient(135deg, #667eea, #764ba2)',
     icon: 'fa-heart',
@@ -32,7 +32,7 @@ const toys = [
   },
   {
     name: '🧩 更多项目',
-    desc: '如果你有任何有趣的点子，欢迎联系我一起开发！',
+    desc: '喵喵喵喵喵喵喵！',
     url: '/#/about',
     bg: 'linear-gradient(135deg, #4facfe, #00f2fe)',
     icon: 'fa-cubes',
